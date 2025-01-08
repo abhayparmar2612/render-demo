@@ -17,6 +17,6 @@ def predict(request):
     # Return the prediction as a JSON response
     return JsonResponse({'prediction': prediction.tolist()})
 
-# Create your views here.
+
 # mlapp/views.py
 
