@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Machine Learning Models | Predictive Analysis</title>
+
+    <!-- Link to Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f6f8;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1e2a3a;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            font-size: 18px;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin: 0 15px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #0056b3;
+            border-radius: 5px;
+            transform: translateY(-2px);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 100px 0;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        section h2 {
+            font-size: 36px;
+            color: #1e2a3a;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        section p {
+            font-size: 18px;
+            color: #6c757d;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Models Grid */
+        .models-grid {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .model-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            margin: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .model-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .model-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .model-card h3 {
+            font-size: 22px;
+            color: #1e2a3a;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+
+        .model-card p {
+            font-size: 16px;
+            color: #6c757d;
+            margin-top: 10px;
+        }
+
+        .model-card a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            color: white;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+
+        .model-card a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e2a3a;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 16px;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            nav a {
+                margin: 10px 0;
+            }
+
+            .models-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .model-card {
+                width: 80%;
+                margin: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#predict">Predict</a>
+        <a href="#models">Models</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Models Overview Section -->
+    <section id="models">
+        <h2>Our Machine Learning Models</h2>
+        <p>We offer various predictive models that can help you make informed decisions. Whether you're looking to predict salaries, prizes, or any other outcomes, our models can help you unlock valuable insights.</p>
+
+        <!-- Models Grid -->
+        <div class="models-grid">
+
+            <!-- Salary Prediction Model Card -->
+            <div class="model-card">
+                <img src="https://via.placeholder.com/250" alt="Salary Prediction">
+                <h3>Salary Prediction</h3>
+                <p>Predict an individual's salary based on factors like education, experience, and location.</p>
+                <a href="/predict/salary">Try Salary Prediction</a>
+            </div>
+
+            <!-- Prize Prediction Model Card -->
+            <div class="model-card">
+                <img src="https://via.placeholder.com/250" alt="Prize Prediction">
+                <h3>Prize Prediction</h3>
+                <p>Predict the probability of winning a prize based on various input factors.</p>
+                <a href="/predict/prize">Try Prize Prediction</a>
+            </div>
+
+            <!-- Product Price Prediction Model Card -->
+            <div class="model-card">
+                <img src="https://via.placeholder.com/250" alt="Price Prediction">
+                <h3>Product Price Prediction</h3>
+                <p>Estimate the price of products based on market trends, features, and demand.</p>
+                <a href="/predict/price">Try Price Prediction</a>
+            </div>
+
+            <!-- House Price Prediction Model Card -->
+            <div class="model-card">
+                <img src="https://via.placeholder.com/250" alt="House Price Prediction">
+                <h3>House Price Prediction</h3>
+                <p>Predict house prices based on factors like location, size, and amenities.</p>
+                <a href="/predict/house-price">Try House Price Prediction</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Machine Learning Website. All rights reserved. | Developed with ❤️ by Your Name</p>
+        <p>Follow us on <a href="#">GitHub</a> and <a href="#">LinkedIn</a></p>
+    </footer>
+
+</body>
+</html>
