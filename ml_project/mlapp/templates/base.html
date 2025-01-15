@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Brand</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and Main Layout */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header (Navigation Bar) */
+        nav {
+            background-color:rgb(47, 89, 142); /* Deep navy blue for a refined look */
+            color: white;
+            padding: 15px 50px;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .logo {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 5px 10px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #18bc9c; /* Light teal accent color */
+        }
+
+        nav .btn-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav .btn {
+            background-color: #18bc9c; /* Light teal for buttons */
+            color: white;
+            padding: 12px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        nav .btn:hover {
+            background-color: #16a085; /* Darker teal on hover */
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #34495e; /* Darker shade of blue */
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .cta-btn {
+            padding: 12px 25px;
+            background-color: #18bc9c; /* Light teal for buttons */
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #16a085; /* Darker teal on hover */
+        }
+
+        /* Section Containers */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        .section-content {
+            font-size: 18px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            color: #7f8c8d;
+        }
+
+        .section-btn {
+            padding: 12px 25px;
+            background-color: #18bc9c; /* Light teal */
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .section-btn:hover {
+            background-color: #16a085; /* Darker teal */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e2a3a; /* Deep navy blue */
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer .footer-links {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        footer .footer-links li {
+            margin: 0 15px;
+        }
+
+        footer .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        footer .footer-links a:hover {
+            color: #18bc9c; /* Light teal hover color */
+        }
+
+        footer p {
+            font-size: 14px;
+            margin-top: 20px;
+            color: #95a5a6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header (Navigation Bar) -->
+    <nav>
+        <div class="logo">YourBrand</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#predict">Predict</a></li>
+            <li><a href="#about-us">About Us</a></li>
+        </ul>
+        <div class="btn-container">
+            <a href="#login" class="btn">Login</a>
+            <a href="#signup" class="btn">Sign Up</a>
+        </div>
+    </nav>
+
+    <main>
+    {% block content %}
+    
+    {% endblock  %}
+    </main>
+
+{% include "footer.html" %}
